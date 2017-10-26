@@ -1,0 +1,288 @@
+/* 文字コードの指定
+------------------------------------------------------------*/
+@charset "UTF-8";
+
+
+
+html
+{
+    font-size: 62.5%; /* ベースとなるフォントサイズの定義 */
+}
+
+body
+{
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /* フォントの種類 */
+    font-size: 1.4rem; /* フォントサイズ */
+    line-height: 1.6; /* 行間 */
+    letter-spacing: .1em;　/* 文字間隔 */
+    color: #4c4c4c; /* 文字色 */
+    background-color:#f9f8f6;
+}
+
+
+/* 共通CSS
+------------------------------------------------------------*/
+.text-center{
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    vertical-align:bottom;
+    line-height:1;
+}
+
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear:both;
+}
+
+.container{
+    max-width:960px;
+    width:100%;
+    margin:0 auto;
+    /*background-color:#d2b48c;*/
+}
+
+*{
+    box-sizing:border-box;
+}
+
+
+
+/* ヘッダーの箇所
+------------------------------------------------------------*/
+header{
+    padding:40px 10px;
+    background-color:#f00;
+}
+
+.h-container{
+    max-width:960px;
+    width:100%;
+    margin:0 auto;
+    background-color:#999;
+}
+
+
+/* ロゴpcは表示する
+-------------------------*/
+#pc-logo{
+    display:block;
+}
+
+
+/* ｓｐは非表示
+-------------------------*/
+#sp-logo {
+    display:none;
+}
+
+
+#h_sns {
+    display:none;;
+}
+
+#h-sns-img img{
+    margin-right: 20px;
+}
+
+.add-mr0{
+    margin-right: 0;  /* メニューアイコンのrigitを0にした  */
+}
+
+#h-nav{
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;  /* 下揃え  */
+}
+
+#h-nav li:first-child{
+      margin-right: auto;    /* 最初のリストだけ左側によせる  */
+}
+
+
+#h-nav #pc-nav{
+  margin-left:20px;
+}
+
+#pc-sns{
+    margin-left:10px;
+}
+
+
+#h-nav img:hover{
+    opacity:0.8;
+}
+
+
+/* toggleの箇所
+-------------------------*/
+#menu{
+  cursor: pointer;
+}
+
+ /*.sp_menu_toggle {
+  display: none;
+}*/
+
+.sp_menu_toggle{
+  background-color:#ff6d77;
+  padding:20px 30px;
+
+}
+
+ .sp_menu_toggle li{
+  padding:10px 15px;
+  border-bottom:1px solid #fff;
+}
+
+.sp_menu_toggle a{
+  display: block;
+  text-align: left;
+  font-size:22px;
+  color:#fff;
+}
+
+
+
+
+/*----------------------*/
+
+
+@media(max-width:640px){
+   header{
+   text-align:center;
+  }
+  #pc-logo,#pc-nav,#pc-sns{
+    display:none;
+}
+ #sp-logo,#h_sns {
+     display:block;
+}
+
+#sp-logo{
+    padding-bottom:25px;
+}
+
+
+
+}
+
+
+
+/* メインコンテンツ とりあえずわけてみた　サイドバーは固定
+------------------------------------------------------------*/
+#contents{
+  width: 100%;
+  margin: 0px -220px 0px 0px;
+  background:#00F;
+  padding:0 10px;
+}
+
+#main{
+    
+}
+
+#main{
+  float: left;
+  margin-right: 240px;
+  background:#fF0;
+}
+
+
+#sidebar{
+  width: 220px;
+  float: right;
+  margin-left: -220px;
+  background:#0f0;
+}
+
+
+
+/* サブメニューの箇所
+------------------------------------------------------------*/
+
+
+
+@media(max-width:640px){
+    #main,#sidebar{
+    float: none;
+    margin: 0px;
+    width: auto;
+    }
+}
+
+
+/* フッター
+------------------------------------------------------------*/
+footer{
+    padding:0 10px;
+    background-color:#0ff;
+}
+
+#pc-pagetop{
+    float:right;
+    display:block;
+}
+
+#sp-pagetop{
+    display:none;
+}
+
+#f-nav{
+    clear:both;
+    margin-bottom:30px;
+    padding-top:35px;
+    border-top:1px solid #999;
+    text-align:center;
+
+}
+
+#f-nav li{
+    display: inline-block;
+    margin-right: 20px
+}
+
+#f-nav li a{
+    font-size:18px;
+    color:#000;
+}
+
+#f-nav li a:hover{
+   opacity:0.7;
+}
+
+#copyright{
+    text-align: center;
+    font-size:10px;
+    color:#b8b4ac;
+}
+
+
+@media(max-width:640px){
+    #pc-pagetop{
+    display:none;
+     }
+
+     #sp-pagetop{
+    display:block;
+    margin:30px auto;
+  }
+  #f-nav li a{
+    font-size:22px;
+}
+  #copyright{
+      font-size:20px;
+  }
+
+
+
+
+/* end
+------------------------------------------------------------*/
