@@ -11,15 +11,8 @@
   <!-- CSSリンク
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-  
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
-
-  
-  
   <!-- スクリプト
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- jQuery -->
@@ -52,9 +45,9 @@
           <a href="#sp-pagetop"><img id="sp-logo" src="./images/header/logo@2x.png" alt="pade top"></a>
       
         <div id="header-sp-sns"> 
-        <a href="#"><img class="sp-sns-img" src="./images/header/fb@2x.png" alt="facebook"></a> 
-        <a href="#"><img class="sp-sns-img" src="./images/header/insta@2x.png" alt="instagrm"></a> 
-        <img id="menu" class="add-mr0 sp-sns-img" src="./images/header/menu_icon@2x.png" alt="menu">
+        <a href="#"><img src="./images/header/fb@2x.png" alt="facebook"></a> 
+        <a href="#"><img src="./images/header/insta@2x.png" alt="instagrm"></a> 
+        <img id="menu" class="add-mr0" src="./images/header/menu_icon@2x.png" alt="menu">
         </div>
       </div>
     </div>
@@ -74,20 +67,26 @@
   <div id="contents" class="clearfix" >
     <div class="container">
         <div id="main">
-        <div class="main-Slide">
+          
+          <div id="breadcrumb" class="clearfix">
+            
+            <div id="breadcrumb-list">
+               <ul>
+                 <li>
+                    <div class="pc-item"><a href="index_01.html"><img src="./images/product/home_icon.png" alt="home icon"></a></div>
+                    <div class="sp-item"><a href="index_01.html"><img src="./images/product/sp_home_icon.png" alt="home icon"></a></div>
+                </li>
+                 <li><a href="index_01.html">HOME</a></li>
+                 <li><span>/</span></li>         
+                 <li>カテゴリー名</li>
+               </ul>
+            </div>
 
-        <div class="owl-carousel owl-theme">
-            <div> <img class="main-slide-img" src="./images/slide/ca_banner_01.jpg" alt="Content1"> </div>
-            <div> <img class="main-slide-img" src="./images/slide/ca_banner_02.jpg" alt="Content2"> </div>
-            <div> <img class="main-slide-img" src="./images/slide/ca_banner_03.jpg" alt="Content3"> </div>
-            <div> <img class="main-slide-img" src="./images/slide/ca_banner_04.jpg" alt="Content3"> </div>
-       </div>           
-       </div>
+           </div>         
           
-          
-          <div class="main-new-items-boxs">
-            <div class="pc-item"><img class="main-img-title pc-item-title" src="./images/contents/title_newitems.png" alt="new item"></div>
-            <div class="sp-item"><img class="sp-item-title" src="./images/contents/sp_title_newitems.png" alt="new item"></div>
+          <div class="main-product-list-boxs">
+            <div class="pc-item"><img class="main-img pc-product-img" src="./images/product/cate_image.jpg" alt="image画像"></div>
+            <div class="sp-item"><img class="main-img sp-product-img" src="./images/product/sp_cate_image.jpg" alt="image画像"></div>
            
             <div class="item-boxs clearfix">
               
@@ -125,15 +124,40 @@
                 <div><img class="main-img" src="./images/contents/item_img_06.jpg" alt="popular item"></div>
                 <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
                 <p>¥10,000 (tax in)</p>
-              </div>                
+              </div> 
+              
+              <div class="item-box">
+                <div><img class="main-img" src="./images/contents/item_img_01.jpg" alt="popular item"></div>
+                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
+                <p>¥10,000 (tax in)</p>
+              </div>
+              
+               <div class="item-box">
+                <div><img class="main-img" src="./images/contents/item_img_02.jpg" alt="popular item"></div>
+                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
+                <p>¥10,000 (tax in)</p>
+              </div>     
+              
+              <div class="item-box add-mr0">
+                <div><img class="main-img" src="./images/contents/item_img_03.jpg" alt="popular item"></div>
+                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
+                <p>¥10,000 (tax in)</p>
+              </div>               
+              
               
             </div>
+            
+            <div id="backnext-box">
+              <a class="btn" href="#">BACK</a>
+              <a class="btn" href="#">NEXT</a>
+            </div>
+            
           </div>
+      <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->             
           
-          
-          <div class="main-popurar-items-boxs">
-            <div class="pc-item"><img class="main-img-title pc-item-title" src="./images/contents/title_popular.png" alt="new item"></div>
-            <div class="sp-item"><img class="sp-item-title" src="./images/contents/sp_title_popular.png" alt="new item"></div>
+          <div class="main-recently-items-boxs">
+            <div class="pc-item"><img class="main-img-title pc-item-title" src="./images/product/recent_pro.png" alt="最近見た商品"></div>
+            <div class="sp-item"><img class="sp-item-title sp-item-title-recent" src="./images/product/sp_title_recent_pro@2x.png" alt="最近見た商品"></div>
            
             <div class="item-boxs clearfix">
               
@@ -149,29 +173,11 @@
                 <p>¥10,000 (tax in)</p>
               </div>     
               
-              <div class="item-box add-mr0">
+              <div class="item-box">
                 <div><img class="main-img" src="./images/contents/item_img_09.jpg" alt="popular item"></div>
                 <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
                 <p>¥10,000 (tax in)</p>
               </div>              
-              
-              <div class="item-box">
-                <div><img class="main-img" src="./images/contents/item_img_10.jpg" alt="popular item"></div>
-                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
-                <p>¥10,000 (tax in)</p>
-              </div>     
-              
-                <div class="item-box">
-                <div><img class="main-img" src="./images/contents/item_img_11.jpg" alt="popular item"></div>
-                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
-                <p>¥10,000 (tax in)</p>
-              </div>               
-              
-               <div class="item-box">
-                <div><img class="main-img" src="./images/contents/item_img_12.jpg" alt="popular item"></div>
-                <p class="item-text">商品名が入ります商品名が入ります商品名が入ります</p>
-                <p>¥10,000 (tax in)</p>
-              </div>                
               
             </div>
           </div>
@@ -213,7 +219,8 @@
             </div>
           </div>
         </div>
-    <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->        
+        
+  <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->        
     
     
         <div id="sidebar">
@@ -357,8 +364,8 @@
   
   <footer>
     <div class="container">
-           <a href="#"><img id="pc-pagetop" src="./images/footer/pagetop_pc.png" alt="pade top"></a> 
-           <a href="#"><img id="sp-pagetop" src="./images/footer/pagetop_sp.png" alt="pade top"> </a>
+         <a href="#"><img id="pc-pagetop" src="./images/footer/pagetop_pc.png" alt="pade top"></a> 
+         <a href="#"><img id="sp-pagetop" src="./images/footer/pagetop_sp.png" alt="pade top"> </a>
       <div id="footer-nav">
         <ul>
           <li> <a href="#">特定商取引に基づく表記</a></li>

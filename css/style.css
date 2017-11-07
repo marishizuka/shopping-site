@@ -2,8 +2,6 @@
 ------------------------------------------------------------*/
 @charset "UTF-8";
 
-
-
 html
 {
     font-size: 62.5%; /* ベースとなるフォントサイズの定義 */
@@ -12,27 +10,30 @@ html
 body
 {
     font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /* フォントの種類 */
-    font-size: 1.4rem; /* フォントサイズ */
-    line-height: 1.6; /* 行間 */
-    letter-spacing: .1em;　/* 文字間隔 */
-    color: #4c4c4c; /* 文字色 */
+    font-size: 1.2rem; /* フォントサイズ */
+    letter-spacing: .1em; /* 文字間隔 */
+    color: #000; /* 文字色 */
     background-color:#f9f8f6;
 }
 
+p{
+    line-height: 1.2;
+}
 
 /* 共通CSS
 ------------------------------------------------------------*/
-.text-center{
-    text-align:center;
+a{
+  color: #000; 
+  text-decoration:none;
 }
 
-a{
-    text-decoration:none;
+
+a:hover{
+  opacity:0.7;
 }
 
 img{
-    vertical-align:bottom;
-    line-height:1;
+  vertical-align:bottom;
 }
 
 
@@ -43,52 +44,38 @@ img{
 }
 
 .container{
-    max-width:960px;
-    width:100%;
-    margin:0 auto;
-    /*background-color:#d2b48c;*/
+  max-width:960px;
+  width:100%;
+  margin:0 auto;
 }
 
 *{
-    box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
-
 
 
 /* ヘッダーの箇所
 ------------------------------------------------------------*/
-header{
-    padding:40px 10px;
-    background-color:#f00;
+.header_wrapper{
+    padding:40px 10px; 
 }
 
-.h-container{
-    max-width:960px;
-    width:100%;
-    margin:0 auto;
-    background-color:#999;
-}
-
-
-/* ロゴpcは表示する
+/* pc版ナビ表示
 -------------------------*/
-#pc-logo{
+#header-pc-nav{
     display:block;
 }
 
-
-/* ｓｐは非表示
+/* sp版ナビメニューの箇所 非表示
 -------------------------*/
-#sp-logo {
+#header-sp-nav,.sp_menu_toggle {
     display:none;
 }
 
-
-#h_sns {
-    display:none;;
-}
-
-#h-sns-img img{
+#header-sp-sns img{
+    display: inline-block;
     margin-right: 20px;
 }
 
@@ -96,29 +83,24 @@ header{
     margin-right: 0;  /* メニューアイコンのrigitを0にした  */
 }
 
-#h-nav{
+#header-pc-nav{
   display: -webkit-flex;
   display: flex;
-  align-items: flex-end;  /* 下揃え  */
+  align-items: flex-end;  /* 画像の下揃え  */
 }
 
-#h-nav li:first-child{
+#header-pc-nav li:first-child{
       margin-right: auto;    /* 最初のリストだけ左側によせる  */
 }
 
-
-#h-nav #pc-nav{
+#header-pc-nav .pc-nav{
   margin-left:20px;
 }
 
-#pc-sns{
+.pc-sns{
     margin-left:10px;
 }
 
-
-#h-nav img:hover{
-    opacity:0.8;
-}
 
 
 /* toggleの箇所
@@ -127,19 +109,21 @@ header{
   cursor: pointer;
 }
 
- /*.sp_menu_toggle {
+.sp_menu_toggle {
   display: none;
-}*/
+}
 
 .sp_menu_toggle{
+  padding:20px;
   background-color:#ff6d77;
-  padding:20px 30px;
-
 }
 
  .sp_menu_toggle li{
-  padding:10px 15px;
+  height:55px;
+  line-height:55px;
+  padding:0px 10px;
   border-bottom:1px solid #fff;
+  /* line-height:1.6;     ここで行間を調整する  */
 }
 
 .sp_menu_toggle a{
@@ -149,84 +133,260 @@ header{
   color:#fff;
 }
 
-
-
-
-/*----------------------*/
-
-
-@media(max-width:640px){
-   header{
-   text-align:center;
-  }
-  #pc-logo,#pc-nav,#pc-sns{
-    display:none;
-}
- #sp-logo,#h_sns {
-     display:block;
-}
-
-#sp-logo{
-    padding-bottom:25px;
+.sp_menu_toggle li:last-child {
+border:0;
 }
 
 
-
-}
-
-
-
-/* メインコンテンツ とりあえずわけてみた　サイドバーは固定
+/* メインコンテンツ サイドバーは固定
 ------------------------------------------------------------*/
 #contents{
   width: 100%;
   margin: 0px -220px 0px 0px;
-  background:#00F;
   padding:0 10px;
-}
-
-#main{
-    
+  /*background:#00F;*/  
 }
 
 #main{
   float: left;
   margin-right: 240px;
-  background:#fF0;
+}
+
+.main-Slide{
+    /*background-color: #0ff;*/
+}
+
+.main-new-items-boxs,.main-popurar-items-boxs{
+       /* background-color: #f0f;*/
+}
+
+.main-img{
+    width:100%;
+
+}
+
+.main-img-title{
+    width:100%;
+}
+
+.item-boxs{
+
+}
+
+.item-box{
+      float:left;
+      width:33.333%;
+      padding:13px 13px 26px 13px;
+      border: 1px solid #f9f8f7;
+      background-color:#fff; 
+}
+
+.item-text{
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 
-#sidebar{
-  width: 220px;
-  float: right;
-  margin-left: -220px;
-  background:#0f0;
+
+#pc-title,.pc-guide,.pc-item{
+    display:block;
+}
+
+#sp-title,.sp-guide,.sp-item,#sp-price-btn{
+    display:none;
 }
 
 
+.pc-guide-title,.pc-item-title{
+    margin:30px 0;
+}
 
-/* サブメニューの箇所
+.sp-guide-title,.sp-item-title{
+        display:block;
+        margin:0 auto;
+        padding:25px 0 18px 0;
+}
+
+/*横幅にwidth:100%;をかけておけば、はみださない*/
+.guide-img{
+    width:100%;
+}
+
+.guide-img2{
+    width:60%;
+}
+
+.main-shopping-guide{
+    clear:both;
+}
+
+
+#guide-boxs{
+    display:flex;
+    justify-content:space-between;
+}
+
+.guide-box{
+   width:49.7%;
+   padding:20px;
+   background-color:#fff;
+}
+
+.guide-tit{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.guide-tit-sub{
+    margin-bottom:3px;
+}
+
+.guide-color{
+    color:#887f69;
+}
+
+.guide-text{
+    margin:15px 0;
+}
+
+/* ここからサイドバー
 ------------------------------------------------------------*/
-
-
-
-@media(max-width:640px){
-    #main,#sidebar{
-    float: none;
-    margin: 0px;
-    width: auto;
-    }
+#sidebar{
+  float: right;
+  width: 220px;
+  margin-left: -220px;
+  /*background:#0f0;*/
 }
 
+.sp-side-menu {
+    display: none;
+}
+
+#sidebar-search{
+    padding:20px;
+    background-color:#fff;
+}
+
+#sidebar-search img{
+    margin-bottom:10px;
+}
+
+.sidebar-img{
+    width:100%;
+}
+
+/* サイドバーのそれぞれの背景の色
+------------------------------------------------------------*/
+.sideber-menu{
+    display:flex;
+    justify-content: space-between;    
+    align-items: center; /* 縦センタリング中央 */
+}
+
+.pc-sideber-menu-bg{
+    height:45px;
+    width:220px;
+    padding:0 11px;
+    margin-top: 10px;
+    background-color:#887f69;
+}
+
+.sp-sideber-menu-bg{
+    height:55px;
+    width:100%;
+    padding:0 10px;
+    margin-top: 20px;
+    background-color:#887f69;
+}
+
+
+.pc-menu-categories-bg{
+    font-size:12px;
+    height:45px;
+    width:220px;
+    padding:0 11px;
+    display:flex;
+    border-bottom:1px solid #f9f8f6;
+    background-color:#fff;
+    }
+
+.pc-menu-categories-bg:last-child,
+.sp-menu-categories-bg:last-child{
+border:0;
+}
+
+.sp-menu-categories-bg{
+    font-size:16px;
+    height:55px;
+    width:100%;
+    padding:0 10px;
+    border-bottom:4px solid #f9f8f6;
+    background-color:#fff;
+}
+
+.side-contetns{
+    text-align: center;
+    line-height: 1.2;
+    padding:10px 10px 20px 10px;
+    background-color:#fff;
+}
+
+.side-contetns p{
+    margin: 11px 0 20px 0;
+    text-align: left;
+}
+
+/*  検索の箇所
+------------------------------------------------------------*/
+dl.search1{
+	position:relative;
+	background-color:#eee;
+}
+
+dl.search1 dt{
+	margin-right:40px;
+	padding:8px 0 8px 8px;
+}
+
+dl.search1 dt input{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	background:none;
+	border:none;
+}
+
+dl.search1 dd{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+dl.search1 dd button{
+	display:block;
+	padding:15px 11px 10px 10px;
+	background:none;
+	border:none;
+}
+
+/* アイコンが表示されないのでHTMLでimg表示させた 
+------------------------------------------------------------*/
+dl.search1 dd button span{
+	display:block;
+	width:20px;
+	height:20px;
+/* 	background-image: url("../images/sidebar/search_icon.png") no-repeat 0 0;*/
+}
 
 /* フッター
 ------------------------------------------------------------*/
 footer{
-    padding:0 10px;
-    background-color:#0ff;
+    padding:60px 10px;
 }
 
 #pc-pagetop{
+    margin-bottom:20px;
     float:right;
     display:block;
 }
@@ -235,26 +395,24 @@ footer{
     display:none;
 }
 
-#f-nav{
+#footer-nav{
     clear:both;
     margin-bottom:30px;
     padding-top:35px;
     border-top:1px solid #999;
     text-align:center;
-
 }
 
-#f-nav li{
+#footer-nav li{
     display: inline-block;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
-#f-nav li a{
-    font-size:18px;
-    color:#000;
+#footer-nav li a:hover{
+   opacity:0.7;
 }
 
-#f-nav li a:hover{
+#pc-pagetop,#sp-pagetop:hover{
    opacity:0.7;
 }
 
@@ -264,25 +422,329 @@ footer{
     color:#b8b4ac;
 }
 
+/* HOMEのスライドの箇所
+------------------------------------------------------------*/
+.main-Slide{
+    max-width:720px;
+    height:auto;
+}
+
+/*下の切り替えのボタンの場所指定*/
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;  /*リンクをタップしたときのカラーを変更*/
+}
+
+/*下の切り替えのボタンのサイズ*/
+.owl-theme .owl-dots .owl-dot span {
+    width: 30px;
+    height: 3px;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 0px;
+    background-color: #D6D6D6;
+}
+
+/*下の切り替えのボタンの色の変化*/
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span{
+    background: #9d1a2d;
+}
+
+/*これ全体のサイズ*/
+.owl-theme{
+    /*background-color:#f00;*/
+}
+
+
+/* パンくずリストの箇所
+------------------------------------------------------------*/
+#breadcrumb{
+    height:34px;
+    line-height: 34px;
+    padding-left:10px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color:#e8e4da;    
+}
+
+#breadcrumb-list img{
+vertical-align: baseline;
+}
+
+#breadcrumb-list{
+    float:left;
+}
+
+#breadcrumb-list ul li{
+      float: left;
+      margin-right:4px;
+}
+
+#breadcrumb-list ul li span{
+    color:#abb4bf;
+}
+
+#breadcrumb-list ul li,
+#breadcrumb-list ul li a{
+      color:#887f69;
+}
+
+
+/* プロダクトリスト商品のメインのイメージ画像
+------------------------------------------------------------*/
+.pc-product-img{
+    margin-bottom:10px;
+}
+
+.sp-product-img{
+    margin-bottom:20px;
+}
+
+/* 前のページ次のページへの箇所
+------------------------------------------------------------*/
+
+#backnext-box{
+    margin-top:20px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.btn{
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+    padding:15px 43px;
+    background-color:#887f69;
+}
+
+#backnext-box a{
+    display: inline-block;
+}
+
+
+
+/* 商品詳細の箇所
+------------------------------------------------------------*/
+#main-product-boxs-bg{
+    padding:40px 60px 80px 40px;
+    background-color:#fff;
+}
+
+#main-product-boxs{
+    padding:40px 60px 80px 60px;
+    background-color: #fff;}
+
+#product-name{
+        border-bottom: 1px solid #e3e8cf;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        background-color: #fff;
+}      
+
+#name{
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#number{
+    float:right;
+    font-size:10px;
+    color:#887f69;
+}
+
+
+#product-slider-box{
+        clear: both;
+        margin-bottom: 20px;
+        /*background-color: #00f;*/
+}
+
+#details-color-size{
+    padding:20px 0;
+    border-top: 1px solid #e3e8cf;
+}
+
+/* クリックしたら画像が切り替わるスライド
+------------------------------------------------------------*/
+#product-slider-box{
+  float:left;
+  /*background-color:#ff0;*/
+}
+
+/* 大きいイメージ画像がでる範囲*/
+#display_img{
+  float:left;
+  width:70%;
+}
+/* 大きい画像のサイズ*/
+#display_img img {
+    width:100%;
+    border:2px solid #fff;
+}
+
+.list_img-wrapper{
+    float:right;
+    width:28%;
+}
+
+/* 小さい画像の範囲*/
+#list_img{
+    width:100%;
+    /*background-color:#f00;*/
+}
+
+/* 小さい画像*/
+#list_img img {
+  float:left;
+  width: 50%;
+  border:2px solid #fff;
+  cursor: pointer;
+}
 
 @media(max-width:640px){
-    #pc-pagetop{
-    display:none;
-     }
-
-     #sp-pagetop{
-    display:block;
-    margin:30px auto;
-  }
-  #f-nav li a{
-    font-size:22px;
+  #display_img,#list_img{
+  width:100%;
 }
-  #copyright{
-      font-size:20px;
-  }
+.list_img-wrapper{
+    margin-top:10px;
+        width:100%;
+}  
+
+  #list_img img {
+      width:20%;
+}
+
+}
+/* -------------------------*/
+
+#main-product-details-boxs{
+    clear: both;
+}
+
+#details-table,#quantity-table{
+    margin-top: 20px;
+}
+
+table{
+width:100%;
+table-layout: auto;
+border-collapse: collapse;
+text-align:center;
+}
 
 
+td, th {
+  height:40px;
+  line-height:40px;
+  color:#887f69;
+  border:1px solid #e8e4da; 
+  font-weight:normal;
+}
+
+th{
+    width:33.333%;
+    background-color:#f9f9f5;
+}
+
+#quantity-table td{
+    text-align: left;
+    
+}
+
+#quantity-table td, th,td{
+    vertical-align: middle;
+    padding:10px;
+}
 
 
-/* end
-------------------------------------------------------------*/
+#details-price{
+    width:100%;
+    float:left;
+}
+
+#price{
+    width: 60%;
+    height:68px;
+    float:left;
+    border-top: 1px solid #e3e8cf;
+    border-bottom: 1px solid #e3e8cf;
+    display:flex;
+    align-items: center; /* 縦センタリング中央 */
+}
+
+.price-color{
+    color:#e80f66;
+}
+
+.price-size{
+    font-size:22px;  /* 値段の箇所 */
+}
+
+#price-btn{
+    width:35%;
+    float:right;
+}
+
+.price-right{
+    margin-right:74px;  
+}
+
+#quantity-price{
+    height:68px;
+    line-height: 68px;
+    border-bottom: 1px solid #e3e8cf;
+    background-color:#fff;
+}
+
+#quantity-price img{
+vertical-align: baseline;
+}
+
+#details-quantity{
+    clear: both;
+    width:100%;
+    height:68px;
+    border-bottom: 1px solid #e3e8cf;
+    display:flex;
+    align-items: center; /* 縦センタリング中央 */
+}
+
+.quantity-right{
+    margin-right:50px;
+}
+
+input{
+    height:40px;
+    border:1px solid #e8e4da; 
+}
+
+#sp-price-btn{
+    padding-top:35px;
+    text-align:center
+}
+.sp-price-btn-img{
+    width:70%;
+}
+
+#quantity-description{
+        clear: both;
+        padding-top:38px;
+}
+
+#quantity-title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e8cf;
+}
+#quantity-title,#quantity-sub-title{
+    color:#887f69;
+    font-size:16px;
+}
+
+#quantity-sub-title{
+    margin:29px 0;
+}

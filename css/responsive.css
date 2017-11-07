@@ -1,0 +1,229 @@
+/* ヘッダー
+------------------------------------------------------------*/
+@media(max-width:640px){
+   .header_wrapper{
+   text-align:center;
+   padding:18px 10px;
+  }
+  #header-pc-nav,.sp_menu_toggle{
+    display:none;
+  }
+  #header-sp-nav {
+     display:block;
+  }
+  #sp-logo{
+      width: 39%;
+    margin-bottom:20px;
+  }
+  #header-sp-sns img{
+    display: inline-block;
+    margin-right: 10px;
+    width:9%;
+  }
+}
+
+/* フッター
+------------------------------------------------------------*/
+@media(max-width:640px){
+    footer{
+    padding:5px 20px 80px 20px;
+    }
+    #pc-pagetop{
+    display:none;
+    }
+    #sp-pagetop{
+    width:40%;
+    display:block;
+    margin:30px auto;
+    }
+   #footer-nav li a{
+    line-height: 1.6;
+    }
+  #copyright{
+      font-size:10px;
+  }
+}
+
+/*コンテンツ
+------------------------------------------------------------*/
+@media(max-width:640px){
+    #contents{
+        padding:0 20px;
+    }
+    #main,#sidebar{
+    float: none;
+    margin: 0px;
+    width: auto;
+    }
+    .pc-side-menu,#pc-title,.pc-guide,.pc-item{
+        display: none;
+    }
+    .sp-side-menu,#sp-title,.sp-guide,.sp-item,#sp-price-btn{
+        display: block;
+    }
+    .sp-item-title{
+        width:55%;
+    }
+    .sp-item-title-recent{
+        width:40%;        
+    }
+    .side-contetns{
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+    text-align: left;
+    }
+
+    .side-contents-right{
+        width:274px;
+        margin-left:15px;
+    }
+    .side-contents-right p{
+        width:100%;
+        font-size:16px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .sp-sidebar-more{
+    margin:5px 0 2px 0;
+    }
+    .sp-sidebar-img{
+    width:35%;
+    }
+    .sp-sidebar-img-more{
+    width:70%;
+    }
+    #sidebar-search{
+    margin-top:10px;
+    padding:15px;
+    }    
+    dl.search1 dt{
+	margin-right:80px;
+	padding:5px 0 5px 20px;
+    }
+    dl.search1 dt input{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	background:none;
+	border:none;
+    }
+
+    dl.search1 dd button{
+	display:block;
+	padding:10px;
+	background:none;
+	border:none;
+    }
+    dl.search1 dd button span{
+	display:block;
+	width:40px;
+	height:40px;
+	/*background-image: url("../images/sidebar/search_icon.png") no-repeat 0 0;*/
+    }
+
+    #guide-boxs{
+    flex-direction: column;
+    } 
+    .guide-box{
+    width:100%;
+    }  
+    .guide-box{
+    padding:15px;
+    margin-bottom: 15px;
+    }
+
+    .guide-box,.item-boxs,table,#quantity-txt{
+    font-size:16px;
+    }
+   .guide-tit {
+    font-size:20px;
+    margin-bottom:10px;
+    } 
+    .guide-tit-sub{
+    margin-bottom:10px;
+    }
+   .item-box{
+    width:50%;
+    padding:10px 10px 24px 10px;
+    }
+    #backnext-box .btn{
+    font-size:16px;
+    padding:3% 10%;
+     }
+     #breadcrumb{     /*-------------パンくずの箇所の高さ---------------*/
+    margin-bottom: 20px;
+    height:40px;
+    line-height: 40px;
+     }
+     #breadcrumb-list img{
+     width:60%;
+     margin: 9px 0px 0px 10px;
+     vertical-align: baseline;
+    }
+
+    #breadcrumb-list{
+        font-size:14px;
+    }
+    #main-product-boxs{
+        padding:20px;
+    }
+    #name{
+        float: none;
+        font-size:20px;
+        margin-bottom:15px;
+    }
+    #number{
+        float: none;
+        font-size:15px;        
+    }
+    #price,#details-quantity{
+    width: 100%;
+    height:120px;
+    float: none;
+    margin: 0px;
+    width: auto;
+    }
+    .sp-price-right{
+    margin-right:50px;
+    }
+    .sp-quantity-right{
+     margin-right:5px;   
+    }
+    .price-size{
+    font-size:30px;
+    }
+    .sp-price-size{ /*---ここ-----*/
+    font-size:16px;
+    }
+    #sp-price-btn{
+    padding-top:35px;
+    text-align:center
+    }
+   .sp-price-btn-img{
+    width:70%;
+    }
+    #details-quantity input{
+    width: 50%;
+    }
+    #quantity-title,#quantity-sub-title{
+    font-size:22px;
+    }
+    #quantity-table td{
+        line-height: 1.4;
+    }
+    #details-color-size{
+    margin-top:10px;
+    }
+    .details-title-img{
+    width:40%;
+    }
+    .details-title-img02{
+    width:40%;        
+    }
+    .details-title-img03{
+    width:60%;        
+    }    
+}
